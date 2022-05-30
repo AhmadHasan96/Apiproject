@@ -1,0 +1,24 @@
+<form class="product-container" (ngSubmit) = "addToCart(product)">
+<div class="product-container" style="margin-top: 64px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;">
+    <a routerLink = "/product/{{product.id}}"><img class="product-image" src ="{{product.url}}" style="list-style-type: none;
+        width: 290px;
+        padding: 20px;
+        margin: 6px 6px;        
+        border: 1px solid #33B5E5;"/></a>
+    <h1>{{product.name}}</h1>
+    <p class="price">${{product.price}}</p>
+    
+    <select class="select-input" [(ngModel)] = "howManyItem" name = "{{product.id}}">
+        <option *ngFor = "let howManyItem of howManyItems" [ngValue]="howManyItem">
+            {{howManyItem}}
+        </option>
+    </select>
+    <button (click)="addToCart(product)">Add To Cart</button>
+    </div>
+
+</form>
