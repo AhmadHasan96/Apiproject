@@ -8,6 +8,7 @@ import { ConfirmationComponent } from './Component/confirmation/confirmation.com
 import { ProductItemComponent } from './Component/product-item/product-item.component';
 import { ProductDetailsComponent } from './Component/product-item-detail/product-item-detail.component';
 import { ProductListComponent } from './Component/product-list/product-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProductListComponent } from './Component/product-list/product-list.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
